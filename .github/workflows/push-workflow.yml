@@ -1,0 +1,21 @@
+
+
+name: Push  Trigger workflow
+on:
+  
+  push:
+    branches: [ "main" ]
+  
+  
+  workflow_dispatch:
+
+
+jobs:
+ push-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display date and time 
+        run: date
+      - name : Display working directory
+        run: pwd
+          
