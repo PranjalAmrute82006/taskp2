@@ -1,0 +1,30 @@
+name: System and Python Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  system-tasks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display current directory
+        run: pwd
+
+      - name: List files
+        run: ls -la
+
+      - name: Display current date and time
+        run: date
+
+      - name: Create a text file
+        run: |
+          echo "This file was created by GitHub Actions." > output.txt
+          echo "GitHub Actions practical task completed." >> output.txt
+
+      - name: Display created text file
+        run: cat output.txt
+
+      - name: Run Python program
+        run: |
+          python3 -c "print('Hello from Python!')"
